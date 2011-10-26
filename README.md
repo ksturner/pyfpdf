@@ -32,6 +32,20 @@ This project does add the following:
  * setup.py - useful for `pip install ...`, among other things.
 
 
+MINIMAL EXAMPLE
+---------------
+
+```python
+from pyfpdf import FPDF
+
+pdf=FPDF()
+pdf.add_page()
+pdf.set_font('Arial','B',16)
+pdf.cell(40,10,'Hello World!')
+pdf.output('tuto1.pdf','F')
+```
+
+
 FORK AUTHOR
 -----------
 
