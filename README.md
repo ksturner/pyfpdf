@@ -6,7 +6,7 @@ PYFPDF Fork
 DESCRIPTION
 -----------
 
-This is a fork of the PyFPdf project hosted on Google code at:
+This is a fork of the PyFpdf project hosted on Google code at:
 http://code.google.com/p/pyfpdf/
 
 The main motivation for the fork was to create a setup.py so that the project

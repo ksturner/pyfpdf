@@ -2,9 +2,9 @@
 
 from distutils.core import setup
 
-setup(name='PyFPdf',
+setup(name='PyFpdf',
       version='1.54c.1',
-      description='Fork of PyFPdf project hosted on Google code',
+      description='Fork of PyFpdf project hosted on Google code',
       author='Kevin Turner',
       author_email='kevin@ksturner.com',
       url='http://code.google.com/p/pyfpdf/',
