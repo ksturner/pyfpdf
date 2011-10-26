@@ -1398,9 +1398,9 @@ class FPDF(object):
 
     def interleaved2of5(self, txt, x, y, w=1.0, h=10.0):
         "Barcode I2of5 (numeric), adds a 0 if odd lenght"
-        narrow = w / 3.0 
+        narrow = w / 3.0
         wide = w
-        
+
         # wide/narrow codes for the digits
         bar_char={}
         bar_char['0'] = 'nnwwn'
@@ -1415,13 +1415,13 @@ class FPDF(object):
         bar_char['9'] = 'nwnwn'
         bar_char['A'] = 'nn'
         bar_char['Z'] = 'wn'
-           
+
         self.set_fill_color(0)
         code = txt
         # add leading zero if code-length is odd
         if len(code) % 2 != 0:
             code = '0' + code
-        
+
         # add start and stop codes
         code = 'AA' + code.lower() + 'ZA'
 
@@ -1507,8 +1507,8 @@ class FPDF(object):
         bar_char['%'] = 'nnnwnwnwn'
 
         self.set_fill_color(0)
-        code = txt      
-            
+        code = txt
+
         code = code.upper()
         for i in xrange (0, len(code), 2):
             char_bar = code[i];
@@ -1518,7 +1518,7 @@ class FPDF(object):
 
             seq= ''
             for s in xrange(0, len(bar_char[char_bar])):
-                seq += bar_char[char_bar][s] 
+                seq += bar_char[char_bar][s]
 
             for bar in xrange(0, len(seq)):
                 if seq[bar] == 'n':
@@ -1534,7 +1534,7 @@ class FPDF(object):
 #End of class
 
 # Fonts:
-    
+
 fpdf_charwidths['courier']={}
 
 for i in xrange(0,256):
@@ -1613,7 +1613,7 @@ fpdf_charwidths['symbol']={
     '\xc6':823,'\xc7':768,'\xc8':768,'\xc9':713,'\xca':713,'\xcb':713,'\xcc':713,'\xcd':713,'\xce':713,'\xcf':713,'\xd0':768,'\xd1':713,'\xd2':790,'\xd3':790,'\xd4':890,'\xd5':823,'\xd6':549,'\xd7':250,'\xd8':713,'\xd9':603,'\xda':603,'\xdb':1042,
     '\xdc':987,'\xdd':603,'\xde':987,'\xdf':603,'\xe0':494,'\xe1':329,'\xe2':790,'\xe3':790,'\xe4':786,'\xe5':713,'\xe6':384,'\xe7':384,'\xe8':384,'\xe9':384,'\xea':384,'\xeb':384,'\xec':494,'\xed':494,'\xee':494,'\xef':494,'\xf0':0,'\xf1':329,
     '\xf2':274,'\xf3':686,'\xf4':686,'\xf5':686,'\xf6':384,'\xf7':384,'\xf8':384,'\xf9':384,'\xfa':384,'\xfb':384,'\xfc':494,'\xfd':494,'\xfe':494,'\xff':0}
-    
+
 fpdf_charwidths['times']={
     '\x00':250,'\x01':250,'\x02':250,'\x03':250,'\x04':250,'\x05':250,'\x06':250,'\x07':250,'\x08':250,'\t':250,'\n':250,'\x0b':250,'\x0c':250,'\r':250,'\x0e':250,'\x0f':250,'\x10':250,'\x11':250,'\x12':250,'\x13':250,'\x14':250,'\x15':250,
     '\x16':250,'\x17':250,'\x18':250,'\x19':250,'\x1a':250,'\x1b':250,'\x1c':250,'\x1d':250,'\x1e':250,'\x1f':250,' ':250,'!':333,'"':408,'#':500,'$':500,'%':833,'&':778,'\'':180,'(':333,')':333,'*':500,'+':564,
@@ -1641,7 +1641,7 @@ fpdf_charwidths['timesB']={
     '\xc6':1000,'\xc7':722,'\xc8':667,'\xc9':667,'\xca':667,'\xcb':667,'\xcc':389,'\xcd':389,'\xce':389,'\xcf':389,'\xd0':722,'\xd1':722,'\xd2':778,'\xd3':778,'\xd4':778,'\xd5':778,'\xd6':778,'\xd7':570,'\xd8':778,'\xd9':722,'\xda':722,'\xdb':722,
     '\xdc':722,'\xdd':722,'\xde':611,'\xdf':556,'\xe0':500,'\xe1':500,'\xe2':500,'\xe3':500,'\xe4':500,'\xe5':500,'\xe6':722,'\xe7':444,'\xe8':444,'\xe9':444,'\xea':444,'\xeb':444,'\xec':278,'\xed':278,'\xee':278,'\xef':278,'\xf0':500,'\xf1':556,
     '\xf2':500,'\xf3':500,'\xf4':500,'\xf5':500,'\xf6':500,'\xf7':570,'\xf8':500,'\xf9':556,'\xfa':556,'\xfb':556,'\xfc':556,'\xfd':500,'\xfe':556,'\xff':500}
-    
+
 fpdf_charwidths['timesBI']={
     '\x00':250,'\x01':250,'\x02':250,'\x03':250,'\x04':250,'\x05':250,'\x06':250,'\x07':250,'\x08':250,'\t':250,'\n':250,'\x0b':250,'\x0c':250,'\r':250,'\x0e':250,'\x0f':250,'\x10':250,'\x11':250,'\x12':250,'\x13':250,'\x14':250,'\x15':250,
     '\x16':250,'\x17':250,'\x18':250,'\x19':250,'\x1a':250,'\x1b':250,'\x1c':250,'\x1d':250,'\x1e':250,'\x1f':250,' ':250,'!':389,'"':555,'#':500,'$':500,'%':833,'&':778,'\'':278,'(':333,')':333,'*':500,'+':570,
